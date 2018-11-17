@@ -26,12 +26,19 @@ public class Main {
         System.out.println("opiskelijanumero " + studentNr);
         System.out.println("");
         
+        int totalExercises = 0;
+        int totalHours = 0;
         System.out.println("Oliot:");
         for (Submission submission : subs) {
+            totalExercises = totalExercises + submission.getExcercises().length;
+            totalHours = submission.getHours() + totalHours;
             System.out.println(submission.getCourse() + ", viikko " + submission.getWeek() 
                     + " tehtyjä tehtäviä yhteensä " + submission.getExcercises().length 
                     + " aikaa kului " + submission.getHours() + " tuntia. Tehdy tehtävät" + java.util.Arrays.toString(submission.getExcercises()));
         }
+        
+        System.out.println("");
+        System.out.println("yhteensä: " + totalExercises + "tehtävää " + totalHours);
 
     }
 }
