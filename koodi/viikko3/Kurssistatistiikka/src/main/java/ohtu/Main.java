@@ -56,6 +56,7 @@ public class Main {
                 System.out.println("");
                 System.out.println("yhteensä: " + total + "/" + courseTotalExercises + " tehtävää " + totalH + " tuntia");
                 System.out.println("");
+                
             }
         }
     }
