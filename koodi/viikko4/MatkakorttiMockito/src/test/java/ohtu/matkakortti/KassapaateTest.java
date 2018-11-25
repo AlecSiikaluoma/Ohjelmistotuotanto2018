@@ -40,5 +40,19 @@ public class KassapaateTest {
         verify(kortti, times(1)).getSaldo();
         verify(kortti, times(0)).osta(anyInt());
     }
+    
+    @Test
+    public void lataaLisaaRahamaaranKortille() {
+        kassa.lataa(kortti, 5);
+        
+        verify(kortti, times(1)).lataa(anyInt());
+    }
+    
+        @Test
+    public void lataaLisaaVaaraRahamaaraKortille() {
+        kassa.lataa(kortti, -5);
+        
+        verify(kortti, times(0)).lataa(anyInt());
+    }
       
 }
