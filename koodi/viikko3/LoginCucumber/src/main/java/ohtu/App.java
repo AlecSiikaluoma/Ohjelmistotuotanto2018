@@ -7,6 +7,7 @@ import ohtu.io.IO;
 import ohtu.services.AuthenticationService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import java.util.Arrays;
 
 public class App {
 
@@ -65,7 +66,7 @@ public class App {
     // samoin kuin testi tekee, eli injektoimalla käyttäjän syötteen StubIO:n avulla
     //
     // UserDao dao = new InMemoryUserDao();  
-    // StubIO io = new StubIO("new", "eero", "sala1nen" );   
+    // StubIO io = new StubIO(Arrays.asList("new", "eero", "sala1nen"));   
     //  AuthenticationService auth = new AuthenticationService(dao);
     // new App(io, auth).run();
     // System.out.println(io.getPrints());
